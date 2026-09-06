@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Event Details - CampusEvents</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                CampusEvents
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="my-events.html">My Events</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html" class="nav-button">Register</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Event Details -->
+    <main class="event-details-page">
+
+        <div class="event-details-container">
+
+            <div class="event-details-image" id="eventImage">
+                EVENT
+            </div>
+
+            <div class="event-details-content">
+
+                <span class="event-category" id="eventCategory">
+                    Loading...
+                </span>
+
+                <h1 id="eventTitle">
+                    Loading event...
+                </h1>
+
+                <p class="event-description" id="eventDescription">
+                    Please wait while event details are loaded.
+                </p>
+
+
+                <!-- Event Information -->
+
+                <div class="event-info-grid">
+
+                    <div class="event-info-box">
+
+                        <span class="info-icon">📅</span>
+
+                        <div>
+                            <strong>Date</strong>
+                            <p id="eventDate">Loading...</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="event-info-box">
+
+                        <span class="info-icon">⏰</span>
+
+                        <div>
+                            <strong>Time</strong>
+                            <p id="eventTime">Loading...</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="event-info-box">
+
+                        <span class="info-icon">📍</span>
+
+                        <div>
+                            <strong>Venue</strong>
+                            <p id="eventVenue">Loading...</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="event-info-box">
+
+                        <span class="info-icon">👥</span>
+
+                        <div>
+                            <strong>Event ID</strong>
+                            <p id="eventId">Loading...</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Organizer -->
+
+                <div class="event-organizer">
+
+                    <h2>Organized By</h2>
+
+                    <p>
+                        Computer Science & Engineering Department
+                    </p>
+
+                </div>
+
+
+                <!-- Register -->
+
+                <div class="event-register">
+
+                    <button
+                        class="primary-button"
+                        id="registerEventButton"
+                    >
+                        Register for Event
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>CampusEvents</h3>
+
+            <p>
+                Your gateway to campus activities and events.
+            </p>
+
+            <p class="copyright">
+                © 2026 CampusEvents. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

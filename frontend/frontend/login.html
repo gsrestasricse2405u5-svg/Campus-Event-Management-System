@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - CampusEvents</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                CampusEvents
+            </div>
+
+            <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="my-events.html">My Events</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="register.html" class="nav-button">Register</a></li>
+</ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Login Section -->
+    <main class="auth-section">
+
+        <div class="auth-container">
+
+            <div class="auth-header">
+
+                <h1>Welcome Back</h1>
+
+                <p>
+                    Login to manage your campus events.
+                </p>
+
+            </div>
+
+
+            <!-- Login Form -->
+            <form id="loginForm">
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-options">
+
+                    <label class="remember-me">
+
+                        <input
+                            type="checkbox"
+                            id="remember"
+                        >
+
+                        Remember me
+
+                    </label>
+
+                    <a href="#">
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="auth-button"
+                >
+                    Login
+                </button>
+
+            </form>
+
+
+            <div class="auth-footer">
+
+                <p>
+                    Don't have an account?
+                    <a href="register.html">
+                        Create an account
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>CampusEvents</h3>
+
+            <p>
+                Your gateway to campus activities and events.
+            </p>
+
+            <p class="copyright">
+                © 2026 CampusEvents. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

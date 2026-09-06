@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register - CampusEvents</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                CampusEvents
+            </div>
+
+            <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="my-events.html">My Events</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="register.html" class="nav-button">Register</a></li>
+</ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Registration Section -->
+    <main class="auth-section">
+
+        <div class="auth-container">
+
+            <div class="auth-header">
+
+                <h1>Create Account</h1>
+
+                <p>
+                    Join CampusEvents and participate in campus activities.
+                </p>
+
+            </div>
+
+
+            <!-- Registration Form -->
+            <form id="registerForm">
+
+                <!-- Full Name -->
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="form-group">
+
+                    <label for="registerEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="form-group">
+
+                    <label for="registerPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        name="password"
+                        placeholder="Create a password"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Department -->
+                <div class="form-group">
+
+                    <label for="department">
+                        Department
+                    </label>
+
+                    <select
+                        id="department"
+                        name="department"
+                        required
+                    >
+
+                        <option value="">
+                            Select Department
+                        </option>
+
+                        <option value="CSE">
+                            Computer Science & Engineering
+                        </option>
+
+                        <option value="ECE">
+                            Electronics & Communication
+                        </option>
+
+                        <option value="EEE">
+                            Electrical & Electronics
+                        </option>
+
+                        <option value="MECH">
+                            Mechanical Engineering
+                        </option>
+
+                        <option value="CIVIL">
+                            Civil Engineering
+                        </option>
+
+                        <option value="IT">
+                            Information Technology
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Year -->
+                <div class="form-group">
+
+                    <label for="year">
+                        Year of Study
+                    </label>
+
+                    <select
+                        id="year"
+                        name="year"
+                        required
+                    >
+
+                        <option value="">
+                            Select Year
+                        </option>
+
+                        <option value="1">
+                            First Year
+                        </option>
+
+                        <option value="2">
+                            Second Year
+                        </option>
+
+                        <option value="3">
+                            Third Year
+                        </option>
+
+                        <option value="4">
+                            Fourth Year
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Phone -->
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        pattern="[0-9]{10}"
+                        maxlength="10"
+                        required
+                    >
+
+                </div>
+
+		<label for="registeredEvent">Registered Event</label>
+
+<select id="registeredEvent" name="registeredEvent" required>
+    <option value="">Select an Event</option>
+</select>
+
+
+                <!-- Register Button -->
+                <button
+                    type="submit"
+                    class="auth-button"
+                >
+                    Create Account
+                </button>
+
+            </form>
+
+
+            <!-- Login Link -->
+            <div class="auth-footer">
+
+                <p>
+
+                    Already have an account?
+
+                    <a href="login.html">
+                        Login here
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>CampusEvents</h3>
+
+            <p>
+                Your gateway to campus activities and events.
+            </p>
+
+            <p class="copyright">
+                © 2026 CampusEvents. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - Campus Event Management</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <h2>Campus Events</h2>
+
+        <ul>
+            <li>
+                <a href="#dashboard">Dashboard</a>
+            </li>
+
+            <li>
+                <a href="#events">Manage Events</a>
+            </li>
+
+            <li>
+                <a href="#students">Students</a>
+            </li>
+
+            <li>
+                <a href="#registrations">Registrations</a>
+            </li>
+
+            <li>
+                <a href="admin-login.html">Logout</a>
+            </li>
+        </ul>
+
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- Header -->
+        <header>
+
+            <div>
+                <h1>Admin Dashboard</h1>
+                <p>Welcome, Administrator</p>
+            </div>
+
+        </header>
+
+        <!-- Manage Events -->
+        <section id="events" class="dashboard-section">
+
+            <div class="section-header">
+
+                <h2>Manage Events</h2>
+
+                <button onclick="showAddEventForm()">
+                    + Add Event
+                </button>
+
+            </div>
+
+
+            <!-- Add Event Form -->
+
+            <div id="addEventForm" class="add-event-form">
+
+                <h3>Add New Event</h3>
+
+                <label for="eventName">
+                    Event Name
+                </label>
+
+                <input
+                    type="text"
+                    id="eventName"
+                    placeholder="Enter event name"
+                >
+
+
+                <label for="eventDate">
+                    Event Date
+                </label>
+
+                <input
+                    type="date"
+                    id="eventDate"
+                >
+
+		<label for="eventTime">
+    Event Time
+</label>
+
+<input
+    type="time"
+    id="eventTime"
+>
+
+
+<label for="eventDescription">
+    Description
+</label>
+
+<textarea
+    id="eventDescription"
+    placeholder="Enter event description"
+></textarea>
+
+
+<label for="eventCategory">
+    Category
+</label>
+
+<select id="eventCategory">
+
+    <option value="">
+        Select category
+    </option>
+
+    <option value="Technical">
+        Technical
+    </option>
+
+    <option value="Cultural">
+        Cultural
+    </option>
+
+    <option value="Sports">
+        Sports
+    </option>
+
+    <option value="Workshop">
+        Workshop
+    </option>
+
+    <option value="Other">
+        Other
+    </option>
+
+</select>
+
+
+
+                <label for="eventVenue">
+                    Venue
+                </label>
+
+                <input
+                    type="text"
+                    id="eventVenue"
+                    placeholder="Enter venue"
+                >
+
+
+                <label for="eventStatus">
+                    Event Status
+                </label>
+
+                <select id="eventStatus">
+
+                    <option value="upcoming">
+                        Upcoming
+                    </option>
+
+                    <option value="ongoing">
+                        Ongoing
+                    </option>
+
+                    <option value="completed">
+                        Completed
+                    </option>
+
+                </select>
+
+
+                <div class="form-buttons">
+
+                    <button onclick="saveNewEvent()">
+                        Save Event
+                    </button>
+
+                    <button
+                        class="cancel-button"
+                        onclick="hideAddEventForm()"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Edit Event Form -->
+
+            <div id="editEventForm" class="add-event-form">
+
+                <h3>Edit Event</h3>
+
+                <input type="hidden" id="editEventRow">
+
+                <label for="editEventName">
+                    Event Name
+                </label>
+
+                <input
+                    type="text"
+                    id="editEventName"
+                    placeholder="Enter event name"
+                >
+
+
+                <label for="editEventDate">
+                    Event Date
+                </label>
+
+                <input
+                    type="date"
+                    id="editEventDate"
+                >
+
+
+                <label for="editEventVenue">
+                    Venue
+                </label>
+
+                <input
+                    type="text"
+                    id="editEventVenue"
+                    placeholder="Enter venue"
+                >
+
+
+                <label for="editEventStatus">
+                    Event Status
+                </label>
+
+                <select id="editEventStatus">
+
+                    <option value="upcoming">
+                        Upcoming
+                    </option>
+
+                    <option value="ongoing">
+                        Ongoing
+                    </option>
+
+                    <option value="completed">
+                        Completed
+                    </option>
+
+                </select>
+
+
+                <div class="form-buttons">
+
+                    <button onclick="updateEvent()">
+                        Update Event
+                    </button>
+
+                    <button
+                        class="cancel-button"
+                        onclick="hideEditEventForm()"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Events Table -->
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Date</th>
+                        <th>Venue</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+
+                <!-- Events will be loaded from MySQL -->
+
+                <tbody id="eventTable">
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        
+        <section class="dashboard-section">
+
+    <h2>Students Registered</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Year</th>
+                <th>Registered Event</th>
+            </tr>
+        </thead>
+
+        <tbody id="studentsTableBody">
+        </tbody>
+
+    </table>
+
+</section>
+        <!-- Feedback -->
+
+        <section id="feedback" class="dashboard-section">
+
+            <h2>Event Feedback</h2>
+
+            <div class="feedback-box">
+
+                <p>
+                    ⭐⭐⭐⭐⭐
+                </p>
+
+                <p>
+                    "The event was very informative and well organized."
+                </p>
+
+                <small>
+                    Student Feedback
+                </small>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

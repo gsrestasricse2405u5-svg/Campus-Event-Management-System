@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body class="login-page">
+
+    <div class="login-container">
+
+        <div class="login-left">
+
+            <div class="login-logo">
+                🎓
+            </div>
+
+            <h1>Campus Connect</h1>
+
+            <p>
+                Event Management &amp; Student Portal
+            </p>
+
+            <div class="login-info">
+                <span>✓</span>
+                Manage Events
+            </div>
+
+            <div class="login-info">
+                <span>✓</span>
+                Manage Students
+            </div>
+
+            <div class="login-info">
+                <span>✓</span>
+                Track Registrations
+            </div>
+
+        </div>
+
+
+        <div class="login-right">
+
+            <h2>Welcome Back!</h2>
+
+            <p class="login-subtitle">
+                Sign in to access the Admin Dashboard
+            </p>
+
+
+            <form id="loginForm">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter your username"
+                    required
+                >
+
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+            <p id="loginMessage"></p>
+
+        </div>
+
+    </div>
+
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

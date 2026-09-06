@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Events - CampusEvents</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                CampusEvents
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="my-events.html">My Events</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html" class="nav-button">Register</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Events Header -->
+    <section class="events-header">
+
+        <h1>Campus Events</h1>
+
+        <p>
+            Discover and participate in exciting events happening on campus.
+        </p>
+
+    </section>
+
+
+    <!-- Search and Filter -->
+    <section class="event-controls">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="eventSearch"
+                placeholder="Search events..."
+            >
+
+        </div>
+
+
+        <div class="filter-box">
+
+            <select id="categoryFilter">
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="technical">
+                    Technical
+                </option>
+
+                <option value="cultural">
+                    Cultural
+                </option>
+
+                <option value="sports">
+                    Sports
+                </option>
+
+                <option value="workshop">
+                    Workshop
+                </option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+
+    <!-- Events -->
+    <section class="all-events-section">
+
+        <div
+            class="all-events-container"
+            id="eventsContainer"
+        >
+
+            <!-- Events will be loaded from MySQL -->
+
+        </div>
+
+    </section>
+
+
+    <!-- No Results Message -->
+
+    <div
+        id="noResults"
+        class="no-results"
+        style="display: none;"
+    >
+        No events found.
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>CampusEvents</h3>
+
+            <p>
+                Your gateway to campus activities and events.
+            </p>
+
+            <p class="copyright">
+                © 2026 CampusEvents. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
